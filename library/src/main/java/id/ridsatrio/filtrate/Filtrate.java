@@ -330,7 +330,7 @@ public final class Filtrate {
             mBtnSkipRate.setText(mSkipButtonText);
             mBtnSkipRate.setOnClickListener(this);
 
-            LayerDrawable progress = (LayerDrawable) mRbRatingBar.getProgressDrawable();
+            LayerDrawable progress = DrawableCompat.unwrap(mRbRatingBar.getProgressDrawable());
             DrawableCompat.setTint(progress.getDrawable(2), mRatingBarColor);
             DrawableCompat.setTint(progress.getDrawable(1), mRatingBarColor);
             DrawableCompat.setTint(progress.getDrawable(0), Color.GRAY);
